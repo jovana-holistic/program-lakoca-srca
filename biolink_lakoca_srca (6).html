@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="shortcut icon" href="favicon.svg">
+<meta name="description" content="Lakoća Srca — 21-dnevni program emocionalnog isceljenja za žene. Holistički coaching, meditacije i vođena refleksija.">
+<meta property="og:title" content="Lakoća Srca | Jovana">
+<meta property="og:description" content="21-dnevni program koji te vodi kroz dubinski proces razumevanja, otpuštanja i vraćanja sebi.">
+<meta property="og:type" content="website">
+<title>Jovana | Lakoća Srca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --cream:#FAF7F2;
+  --sage:#8A9E7E;
+  --mauve:#C4A8C0;
+  --plum:#4A2E4A;
+  --gold:#C9A84C;
+  --text:#2C1F2C;
+  --muted:#7A6878;
+  --border:rgba(196,168,192,0.22);
+}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 50% at 15% 10%,rgba(196,168,192,.13) 0,transparent 60%),radial-gradient(ellipse 50% 60% at 85% 90%,rgba(138,158,126,.09) 0,transparent 60%);pointer-events:none;z-index:0}
+.wrap{max-width:780px;margin:0 auto;padding:52px 36px 100px;position:relative;z-index:1}
+
+/* HEADER */
+.avatar-ring{width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,var(--mauve),var(--sage));padding:2.5px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center}
+.avatar-inner{width:100%;height:100%;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--plum)}
+.name{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;text-align:center;color:var(--plum);margin-bottom:6px;letter-spacing:.3px}
+.tagline{text-align:center;font-size:11px;color:var(--muted);font-weight:300;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:32px}
+.divider{display:flex;align-items:center;gap:16px;margin-bottom:32px}
+.divider::before,.divider::after{content:'';flex:1;height:.5px;background:linear-gradient(90deg,transparent,rgba(196,168,192,.5),transparent)}
+.divider span{font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--mauve)}
+
+/* HERO */
+.hero{background:var(--plum);border-radius:20px;padding:38px 36px;margin-bottom:14px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:rgba(196,168,192,.1)}
+.hero::after{content:'';position:absolute;bottom:-40px;left:-30px;width:140px;height:140px;border-radius:50%;background:rgba(138,158,126,.08)}
+.badge{display:inline-block;background:rgba(201,168,76,.2);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-size:10px;font-weight:400;letter-spacing:2.5px;text-transform:uppercase;padding:5px 16px;border-radius:100px;margin-bottom:18px}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:400;font-style:italic;color:#FAF7F2;line-height:1.1;margin-bottom:16px;position:relative;z-index:1}
+.hero-intro{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:rgba(250,247,242,.9);line-height:1.5;margin-bottom:16px;position:relative;z-index:1}
+.hero-lead{font-size:16px;color:rgba(250,247,242,.88);font-weight:300;line-height:1.75;margin-bottom:8px;position:relative;z-index:1}
+.hero-sub{font-size:14px;color:rgba(250,247,242,.55);font-weight:300;line-height:1.65;margin-bottom:24px;position:relative;z-index:1}
+.hero-meta{display:flex;gap:20px;margin-bottom:28px;position:relative;z-index:1;flex-wrap:wrap}
+.hero-meta span{font-size:12px;color:rgba(250,247,242,.55);letter-spacing:.5px;display:flex;align-items:center;gap:6px}
+.hero-meta span::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.cta{display:block;background:var(--gold);color:var(--plum);text-decoration:none;text-align:center;font-size:14px;font-weight:500;letter-spacing:.8px;padding:16px 28px;border-radius:100px;transition:opacity .2s,transform .2s;position:relative;z-index:1}
+.cta:hover{opacity:.88;transform:translateY(-1px)}
+
+/* SEKCIJE */
+.section-label{font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);text-align:center;margin:36px 0 16px}
+
+/* FAZE */
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.phase{background:#fff;border:1px solid var(--border);border-radius:16px;padding:20px 16px;text-align:center}
+.phase-num{font-size:22px;margin-bottom:10px}
+.phase-week{font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.phase-name{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:var(--plum);margin-bottom:8px;line-height:1.3}
+.phase-desc{font-size:12px;color:var(--muted);line-height:1.6}
+
+/* ACCORDION LEKCIJE */
+.acc{border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:8px;background:#fff}
+.acc summary{padding:16px 20px;cursor:pointer;font-size:14px;font-weight:400;color:var(--text);display:flex;justify-content:space-between;align-items:center;list-style:none;line-height:1.4}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::after{content:'›';font-size:20px;color:var(--mauve);transition:transform .25s;flex-shrink:0;margin-left:12px}
+.acc[open] summary::after{transform:rotate(90deg)}
+.acc-inner{padding:4px 20px 18px;font-size:13px;color:var(--muted);line-height:1.85}
+.acc-inner strong{color:var(--plum);font-weight:500}
+.acc-bullets{margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.acc-bullet{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--text);line-height:1.6}
+.acc-bullet::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--mauve);flex-shrink:0;margin-top:7px}
+.acc-bullets-label{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--mauve);margin-top:16px;margin-bottom:2px}
+
+/* FEATURED QUOTE */
+.quote{padding:32px 0;margin:4px 0;text-align:center}
+.quote-text{font-family:'Cormorant Garamond',serif;font-size:22px;font-style:italic;color:var(--plum);line-height:1.65;max-width:560px;margin:0 auto 16px}
+.quote-line{width:40px;height:.5px;background:var(--mauve);margin:0 auto 14px}
+.quote-author{font-size:11px;color:var(--muted);letter-spacing:.5px}
+
+/* TESTIMONIJALI */
+.testi-visible{display:flex;flex-direction:column;gap:10px}
+.testi-hidden{display:none;flex-direction:column;gap:10px;margin-top:10px}
+.testi-hidden.open{display:flex}
+.testi-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px 24px}
+.testi-text{font-family:'Cormorant Garamond',serif;font-size:18px;font-style:italic;color:var(--plum);line-height:1.7;margin-bottom:14px}
+.testi-footer{display:flex;align-items:center;gap:10px}
+.testi-dot{width:6px;height:6px;border-radius:50%;background:var(--mauve);flex-shrink:0}
+.testi-author{font-size:11px;color:var(--muted);letter-spacing:.5px}
+.expand-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:12px;padding:13px;background:#fff;border:1px solid var(--border);border-radius:14px;font-size:13px;color:var(--muted);cursor:pointer;font-family:'DM Sans',sans-serif;transition:border-color .15s,color .15s}
+.expand-btn:hover{border-color:rgba(196,168,192,.5);color:var(--plum)}
+.expand-btn .arr{font-size:16px;transition:transform .25s;display:inline-block}
+.expand-btn.open .arr{transform:rotate(180deg)}
+
+/* LINKS */
+.links{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.link-btn{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:17px 20px;text-decoration:none;color:var(--text);transition:transform .15s,box-shadow .15s,border-color .15s}
+.link-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(74,46,74,.06);border-color:rgba(196,168,192,.45)}
+.link-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.li-mauve{background:rgba(196,168,192,.16)}
+.li-sage{background:rgba(138,158,126,.13)}
+.li-gold{background:rgba(201,168,76,.13)}
+.link-info{flex:1}
+.link-label{font-size:14px;font-weight:500;margin-bottom:2px}
+.link-desc{font-size:12px;color:var(--muted)}
+.link-arrow{color:var(--mauve);font-size:18px;opacity:.6}
+
+/* O MENI */
+.about{padding:32px 0 8px}
+.about-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--plum);margin-bottom:14px}
+.about-text{font-size:14px;color:var(--muted);line-height:1.85}
+.about-text p{margin-bottom:12px}
+.about-text p:last-child{margin-bottom:0}
+
+.footer{text-align:center;font-size:10px;color:var(--muted);opacity:.5;margin-top:52px;letter-spacing:.5px}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.wrap>*{animation:fadeUp .5s ease both}
+.wrap>*:nth-child(1){animation-delay:.05s}
+.wrap>*:nth-child(2){animation-delay:.1s}
+.wrap>*:nth-child(3){animation-delay:.14s}
+.wrap>*:nth-child(4){animation-delay:.18s}
+.wrap>*:nth-child(5){animation-delay:.22s}
+.wrap>*:nth-child(6){animation-delay:.26s}
+.wrap>*:nth-child(7){animation-delay:.3s}
+.wrap>*:nth-child(8){animation-delay:.34s}
+.wrap>*:nth-child(9){animation-delay:.38s}
+.wrap>*:nth-child(10){animation-delay:.42s}
+.wrap>*:nth-child(11){animation-delay:.46s}
+.wrap>*:nth-child(12){animation-delay:.5s}
+.wrap>*:nth-child(13){animation-delay:.54s}
+
+@media(max-width:600px){
+  .phases{grid-template-columns:1fr}
+  .hero-title{font-size:32px}
+  .wrap{padding:40px 20px 80px}
+  .hero{padding:28px 22px}
+}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B51K152BE9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B51K152BE9');
+</script>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="avatar-ring"><div class="avatar-inner">J</div></div>
+  <h1 class="name">Jovana</h1>
+  <p class="tagline">Holistički zdravstveni coaching · Emocionalno isceljenje</p>
+  <div class="divider"><span>✦</span></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="badge">21-dnevni program</span>
+    <h2 class="hero-title">Lakoća Srca</h2>
+    <p class="hero-intro">Kada prestaneš da se boriš sa onim što osećaš — počinješ da zaista budeš tu za sebe.</p>
+    <p class="hero-lead">21-dnevni program koji te vodi kroz dubinski proces razumevanja, otpuštanja i vraćanja sebi.</p>
+    <p class="hero-sub">Za žene koje osećaju da ponavljaju iste obrasce u vezama i koje su spremne da zakorače drugačije — kroz rad sa telom, vođenu refleksiju i emocionalno isceljenje.</p>
+    <div class="hero-meta">
+      <span>12 lekcija</span>
+      <span>Audio meditacije</span>
+      <span>Dnevnik refleksija</span>
+      <span>Personalizovana podrška</span>
+    </div>
+    <a href="https://lakoca-srca.netlify.app/?utm_source=instagram&utm_medium=bio&utm_content=cta_hero" class="cta">Prijavi se za sledeći krug →</a>
+  </div>
+
+  <!-- FAZE -->
+  <p class="section-label">Struktura programa</p>
+  <div class="phases">
+    <div class="phase">
+      <div class="phase-num">🌱</div>
+      <div class="phase-week">Nedelja 1</div>
+      <div class="phase-name">Osvešćivanje</div>
+      <div class="phase-desc">Postaneš svesna gde si i šta ponavljaš — bez suda, bez pritiska</div>
+    </div>
+    <div class="phase">
+      <div class="phase-num">🌊</div>
+      <div class="phase-week">Nedelja 2</div>
+      <div class="phase-name">Razumevanje i otpuštanje</div>
+      <div class="phase-desc">Razumeš odakle dolazi obrazac i počinješ da ga puštaš</div>
+    </div>
+    <div class="phase">
+      <div class="phase-num">💜</div>
+      <div class="phase-week">Nedelja 3</div>
+      <div class="phase-name">Integracija</div>
+      <div class="phase-desc">Vraćaš se sebi. Postavljaš granice. Pronalaziš unutrašnju snagu.</div>
+    </div>
+  </div>
+
+  <!-- LEKCIJE — samo 1 otvorena, ostale expandable -->
+  <p class="section-label">Sadržaj programa</p>
+  <details class="acc" open>
+    <summary>Nedelja 1 — Osvešćivanje (Dan 1–7)</summary>
+    <div class="acc-inner">
+      Prva nedelja je posvećena usporavanju i okretanju prema sebi — bez suda, bez pritiska. Kroz body scan, pisanje i vođene vežbe osvešćuješ svoj specifični obrazac u vezama. Ne kao grešku, već kao signal koji je čekao da bude saslušan.
+      <p class="acc-bullets-label">Šta dobijaš</p>
+      <div class="acc-bullets">
+        <div class="acc-bullet">Dobijaš uvid u sopstvene obrasce i okidače kroz somatska iskustva na nivou tela</div>
+        <div class="acc-bullet">Učiš da prepoznaš kako telo nosi i čuva emocionalna iskustva koja um nije procesuirao</div>
+        <div class="acc-bullet">Razvijaš sposobnost samoposmatranja — da vidiš sebe jasno, bez osude i samokritike</div>
+      </div>
+    </div>
+  </details>
+  <details class="acc">
+    <summary>Nedelja 2 — Razumevanje i otpuštanje (Dan 8–14)</summary>
+    <div class="acc-inner">
+      Druga nedelja ide dublje — u koren obrasca. Razumeš odakle dolaze tvoji izbori: iz ranog detinjstva, iz prethodnih odnosa, iz naučenih uloga. Kroz cord cutting meditaciju, pismo unutrašnjem detetu i loving kindness praksu počinješ da puštaš ono što te više ne služi.
+      <p class="acc-bullets-label">Šta dobijaš</p>
+      <div class="acc-bullets">
+        <div class="acc-bullet">Razumeš koren svojih emocionalnih obrazaca kroz rad sa ranim iskustvima i unutrašnjim detetom</div>
+        <div class="acc-bullet">Procesuiraš nedovršene emocionalne cikluse iz prošlih odnosa i počinješ da ih integrišeš</div>
+        <div class="acc-bullet">Izgradiš stabilan unutrašnji oslonac i osećaj vlastite vrednosti koji ne zavisi od tuđe potvrde</div>
+      </div>
+    </div>
+  </details>
+  <details class="acc">
+    <summary>Nedelja 3 — Integracija i vraćanje sebi (Dan 15–21)</summary>
+    <div class="acc-inner">
+      Treća nedelja je o integraciji — o tome da sve što si naučila postane deo načina na koji živiš. Postavljaš granice bez krivice, pronalaziš stabilnu snagu u sebi i otvaraš srce iz mesta mira, a ne straha. Program završavaš sa personalnim action planom koji nosiš dalje.
+      <p class="acc-bullets-label">Šta dobijaš</p>
+      <div class="acc-bullets">
+        <div class="acc-bullet">Razvijaš zdrave lične granice kao izraz samopoštovanja — ne kao zid, već kao izbor</div>
+        <div class="acc-bullet">Rekonektuješ se sa sopstvenim unutrašnjim resursima i kapacitetom za emocionalnu regulaciju</div>
+        <div class="acc-bullet">Integriše sve što si prošla i nosiš dalje psihološku fleksibilnost kao osnov trajne promene</div>
+      </div>
+    </div>
+  </details>
+
+  <!-- FEATURED QUOTE -->
+  <div class="quote">
+    <p class="quote-text">"Kao da mi je neko prvi put rekao: Dovoljna si. Vreme je da pustiš. I ja sam pustila."</p>
+    <div class="quote-line"></div>
+    <p class="quote-author">Vesna, 48 godina</p>
+  </div>
+
+  <!-- TESTIMONIJALI -->
+  <p class="section-label">Iskustva učesnica</p>
+
+  <div class="testi-visible">
+    <div class="testi-card">
+      <p class="testi-text">"Pisala sam, plakala, ali i shvatila da ne moram više da nosim sve sama. Prvi put sam se osetila oslobođeno."</p>
+      <div class="testi-footer"><div class="testi-dot"></div><span class="testi-author">Ivana, 40 godina — učesnica programa</span></div>
+    </div>
+    <div class="testi-card">
+      <p class="testi-text">"Kao da sam se vratila sebi. Ne znam kako da objasnim, ali baš mi prija. Svaki put mi nešto klikne."</p>
+      <div class="testi-footer"><div class="testi-dot"></div><span class="testi-author">Jovana, 30 godina — učesnica programa</span></div>
+    </div>
+  </div>
+
+  <div class="testi-hidden" id="testiMore">
+    <div class="testi-card">
+      <p class="testi-text">"Nema magije i čarobnog štapića, ali ima istine. I to mi je trebalo. Polako, ali sigurno puštam."</p>
+      <div class="testi-footer"><div class="testi-dot"></div><span class="testi-author">Tanja, 38 godina — učesnica programa</span></div>
+    </div>
+    <div class="testi-card">
+      <p class="testi-text">"Nisam se probudila sa onim osećajem težine i sivila — nego sa idejama. Pa ja sam lakša u glavi sada!"</p>
+      <div class="testi-footer"><div class="testi-dot"></div><span class="testi-author">Ljiljana — učesnica individualnog rada</span></div>
+    </div>
+    <div class="testi-card">
+      <p class="testi-text">"Ona sesija sinoć bila je otkrovenje. Koliko toga sam držala zatvoreno u sebi, a toga uopšte nisam bila svesna."</p>
+      <div class="testi-footer"><div class="testi-dot"></div><span class="testi-author">Ana — učesnica individualnog rada</span></div>
+    </div>
+    <div class="testi-card">
+      <p class="testi-text">"Osećala sam se osnaženo. Podsetila si me da je odgovornost u mom životu moja — da li na autopilotu ili svesno pogledati u sebe."</p>
+      <div class="testi-footer"><div class="testi-dot"></div><span class="testi-author">Svjetlana — učesnica individualnog rada</span></div>
+    </div>
+  </div>
+
+  <button class="expand-btn" id="testiBtn" onclick="toggleTesti()">
+    Prikaži još iskustava <span class="arr">∨</span>
+  </button>
+
+  <!-- LINKS -->
+  <p class="section-label">Istraži</p>
+  <div class="links">
+    <a href="https://lakoca-srca.netlify.app/meditacija?utm_source=instagram&utm_medium=bio&utm_content=meditacija" class="link-btn">
+      <div class="link-icon li-gold">🎁</div>
+      <div class="link-info"><div class="link-label">Besplatna meditacija</div><div class="link-desc">10 minuta — odmah dostupno</div></div>
+      <span class="link-arrow">›</span>
+    </a>
+    <a href="https://lakoca-srca.netlify.app/?utm_source=instagram&utm_medium=bio&utm_content=lakoca_srca" class="link-btn">
+      <div class="link-icon li-mauve">💜</div>
+      <div class="link-info"><div class="link-label">Program Lakoća Srca</div><div class="link-desc">Prijavi se za sledeći krug</div></div>
+      <span class="link-arrow">›</span>
+    </a>
+    <a href="https://instagram.com/jovana.holistic.health.coach?utm_source=biolink&utm_medium=web&utm_content=instagram" class="link-btn">
+      <div class="link-icon li-sage">📸</div>
+      <div class="link-info"><div class="link-label">Instagram</div><div class="link-desc">@jovana.holistic.health.coach</div></div>
+      <span class="link-arrow">›</span>
+    </a>
+  </div>
+
+  <!-- O MENI -->
+  <div class="about">
+    <h3 class="about-title">Ko sam ja</h3>
+    <div class="about-text">
+      <p>Jovana. Holistički zdravstveni coach sa fokusom na emocionalno isceljenje i obrasce u vezama.</p>
+      <p>Radim sa ženama koje se osećaju zaglavljeno — koje ponavljaju iste izbore, iste dinamike, iste boli. Koje su naučile da budu tu za sve i svakoga, osim za sebe.</p>
+      <p>Kroz somatski pristup, meditaciju i dubinski rad na svesti, pomažem ti da razumeš odakle dolaze tvoji obrasci i kako da ih konačno pustiš. Lakoća Srca nije program. To je put nazad sebi.</p>
+    </div>
+  </div>
+
+  <p class="footer">© 2026 Holistic Health by Jovana</p>
+</div>
+
+<script>
+function toggleTesti(){
+  const more = document.getElementById('testiMore');
+  const btn = document.getElementById('testiBtn');
+  const isOpen = more.classList.contains('open');
+  more.classList.toggle('open');
+  btn.classList.toggle('open');
+  btn.innerHTML = isOpen
+    ? 'Prikaži još iskustava <span class="arr">∨</span>'
+    : 'Sakrij <span class="arr">∨</span>';
+}
+</script>
+</body>
+</html>
