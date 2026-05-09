@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B51K152BE9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B51K152BE9');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="shortcut icon" href="favicon.svg">
-<meta name="description" content="Lakoća Srca — 21-dnevni program emocionalnog isceljenja za žene. Holistički coaching, meditacije i vođena refleksija.">
-<meta property="og:title" content="Lakoća Srca | Jovana">
-<meta property="og:description" content="21-dnevni program koji te vodi kroz dubinski proces razumevanja, otpuštanja i vraćanja sebi.">
-<meta property="og:type" content="website">
 <title>Jovana | Lakoća Srca</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -97,6 +99,16 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .expand-btn .arr{font-size:16px;transition:transform .25s;display:inline-block}
 .expand-btn.open .arr{transform:rotate(180deg)}
 
+/* PROGRAM CTA */
+.program-cta{background:var(--plum);border-radius:20px;padding:36px 32px;margin:24px 0;text-align:center;position:relative;overflow:hidden}
+.program-cta::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;border-radius:50%;background:rgba(196,168,192,.1);pointer-events:none}
+.program-cta::after{content:'';position:absolute;bottom:-40px;left:-40px;width:130px;height:130px;border-radius:50%;background:rgba(201,168,76,.07);pointer-events:none}
+.program-cta-eyebrow{font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--mauve);margin-bottom:12px;position:relative;z-index:1}
+.program-cta-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;font-style:italic;color:#FAF7F2;line-height:1.25;margin-bottom:12px;position:relative;z-index:1}
+.program-cta-desc{font-size:13px;color:rgba(250,247,242,.7);font-weight:300;line-height:1.8;margin-bottom:28px;position:relative;z-index:1}
+.program-cta-btn{display:inline-block;background:var(--gold);color:var(--plum);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.6px;padding:15px 32px;border-radius:100px;transition:opacity .2s,transform .2s;position:relative;z-index:1}
+.program-cta-btn:hover{opacity:.88;transform:translateY(-1px)}
+
 /* LINKS */
 .links{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
 .link-btn{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:17px 20px;text-decoration:none;color:var(--text);transition:transform .15s,box-shadow .15s,border-color .15s}
@@ -118,6 +130,33 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 .about-text p:last-child{margin-bottom:0}
 
 .footer{text-align:center;font-size:10px;color:var(--muted);opacity:.5;margin-top:52px;letter-spacing:.5px}
+
+/* KVIZ */
+.quiz-wrap{background:#fff;border:1px solid var(--border);border-radius:20px;padding:32px 28px;margin-bottom:14px}
+.quiz-intro{text-align:center}
+.quiz-intro-icon{font-size:36px;display:block;margin-bottom:14px}
+.quiz-intro-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;font-style:italic;color:var(--plum);margin-bottom:8px}
+.quiz-intro-desc{font-size:13px;color:var(--muted);font-weight:300;line-height:1.7;margin-bottom:24px}
+.quiz-start-btn{background:var(--plum);color:var(--cream);border:none;border-radius:100px;padding:14px 36px;font-size:14px;font-weight:500;font-family:'DM Sans',sans-serif;cursor:pointer;transition:opacity .2s,transform .2s}
+.quiz-start-btn:hover{opacity:.88;transform:translateY(-1px)}
+.quiz-progress-bar{height:3px;background:rgba(196,168,192,.2);border-radius:100px;margin-bottom:20px;overflow:hidden}
+.quiz-progress-fill{height:100%;background:var(--mauve);border-radius:100px;transition:width .4s ease}
+.quiz-counter{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.quiz-q{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;font-style:italic;color:var(--plum);line-height:1.5;margin-bottom:20px}
+.quiz-options{display:flex;flex-direction:column;gap:10px}
+.quiz-opt{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:14px 18px;font-size:13px;color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;cursor:pointer;text-align:left;line-height:1.5;transition:border-color .15s,background .15s}
+.quiz-opt:hover{border-color:var(--mauve);background:#fff}
+.quiz-result{text-align:center}
+.quiz-result-icon{font-size:42px;margin-bottom:16px}
+.quiz-result-type{font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;color:var(--mauve);margin-bottom:10px}
+.quiz-result-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;font-style:italic;color:var(--plum);line-height:1.3;margin-bottom:14px}
+.quiz-result-text{font-size:13px;color:var(--muted);font-weight:300;line-height:1.85;margin-bottom:20px}
+.quiz-result-divider{width:40px;height:.5px;background:var(--border);margin:0 auto 20px}
+.quiz-result-program-label{font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--sage);margin-bottom:10px}
+.quiz-result-program{font-size:13px;color:var(--muted);font-weight:300;line-height:1.85;margin-bottom:28px}
+.quiz-result-cta{display:inline-block;background:var(--plum);color:var(--cream);text-decoration:none;font-size:14px;font-weight:500;letter-spacing:.5px;padding:15px 32px;border-radius:100px;transition:opacity .2s,transform .2s;margin-bottom:16px}
+.quiz-result-cta:hover{opacity:.88;transform:translateY(-1px)}
+.quiz-restart{display:block;width:100%;margin-top:4px;background:none;border:none;font-size:12px;color:var(--muted);cursor:pointer;font-family:'DM Sans',sans-serif;text-decoration:underline}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 .wrap>*{animation:fadeUp .5s ease both}
@@ -142,14 +181,6 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
   .hero{padding:28px 22px}
 }
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-B51K152BE9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-B51K152BE9');
-</script>
 </head>
 <body>
 <div class="wrap">
@@ -172,7 +203,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
       <span>Dnevnik refleksija</span>
       <span>Personalizovana podrška</span>
     </div>
-    <a href="https://lakoca-srca.netlify.app/?utm_source=instagram&utm_medium=bio&utm_content=cta_hero" class="cta">Prijavi se za sledeći krug →</a>
+    <a href="https://prijava-lakoca-srca.netlify.app/" class="cta">Prijava za program →</a>
   </div>
 
   <!-- FAZE -->
@@ -237,6 +268,14 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
     </div>
   </details>
 
+  <!-- PROGRAM CTA -->
+  <div class="program-cta">
+    <p class="program-cta-eyebrow">Sledeći krug</p>
+    <h3 class="program-cta-title">Spremnа si da pustiš?</h3>
+    <p class="program-cta-desc">21 dan. Somatski rad, meditacije, dubinski uvidi.<br>Vraćaš se sebi — korak po korak.</p>
+    <a href="https://prijava-lakoca-srca.netlify.app/" class="program-cta-btn">Prijava za program →</a>
+  </div>
+
   <!-- FEATURED QUOTE -->
   <div class="quote">
     <p class="quote-text">"Kao da mi je neko prvi put rekao: Dovoljna si. Vreme je da pustiš. I ja sam pustila."</p>
@@ -281,22 +320,58 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
     Prikaži još iskustava <span class="arr">∨</span>
   </button>
 
+  <!-- KVIZ -->
+  <p class="section-label">Kako ti Program <em style="font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--plum);font-size:12px;letter-spacing:1px">Lakoća Srca</em> može pomoći</p>
+  <div class="quiz-wrap" id="quizWrap">
+
+    <div class="quiz-intro" id="quizIntro">
+      <span class="quiz-intro-icon">🌿</span>
+      <p class="quiz-intro-title">Da li ti je potrebna <em style="font-family:'Cormorant Garamond',serif;font-style:italic">Lakoća Srca</em>?</p>
+      <p style="font-size:12px;color:var(--muted);font-weight:300;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;">Proveri kako ti ovaj program može pomoći</p>
+      <p class="quiz-intro-desc">6 pitanja. 3 minuta. Iskreno sebi.</p>
+      <button class="quiz-start-btn" onclick="startQuiz()">Počni →</button>
+    </div>
+
+    <div id="quizQuestions" style="display:none">
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizFill"></div></div>
+      <p class="quiz-counter" id="quizCounter">Pitanje 1 od 6</p>
+      <p class="quiz-q" id="quizQ"></p>
+      <div class="quiz-options" id="quizOptions"></div>
+    </div>
+
+    <div class="quiz-result" id="quizResult" style="display:none">
+      <div class="quiz-result-icon" id="quizResultIcon"></div>
+      <p class="quiz-result-type" id="quizResultType"></p>
+      <h3 class="quiz-result-title" id="quizResultTitle"></h3>
+      <p class="quiz-result-text" id="quizResultText"></p>
+      <div class="quiz-result-divider"></div>
+      <p class="quiz-result-program-label">Kako ti <strong style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600">Lakoća Srca</strong> pomaže</p>
+      <p class="quiz-result-program" id="quizResultProgram"></p>
+      <a href="https://prijava-lakoca-srca.netlify.app/" class="quiz-result-cta">Prijavi se za program →</a>
+      <button class="quiz-restart" onclick="restartQuiz()">Ponovi kviz</button>
+    </div>
+
+  </div>
+
   <!-- LINKS -->
   <p class="section-label">Istraži</p>
   <div class="links">
-    <a href="https://lakoca-srca.netlify.app/meditacija?utm_source=instagram&utm_medium=bio&utm_content=meditacija" class="link-btn">
+    <a href="https://besplatna-meditacija.netlify.app" class="link-btn" target="_blank">
       <div class="link-icon li-gold">🎁</div>
       <div class="link-info"><div class="link-label">Besplatna meditacija</div><div class="link-desc">10 minuta — odmah dostupno</div></div>
       <span class="link-arrow">›</span>
     </a>
-    <a href="https://lakoca-srca.netlify.app/?utm_source=instagram&utm_medium=bio&utm_content=lakoca_srca" class="link-btn">
-      <div class="link-icon li-mauve">💜</div>
-      <div class="link-info"><div class="link-label">Program Lakoća Srca</div><div class="link-desc">Prijavi se za sledeći krug</div></div>
-      <span class="link-arrow">›</span>
-    </a>
-    <a href="https://instagram.com/jovana.holistic.health.coach?utm_source=biolink&utm_medium=web&utm_content=instagram" class="link-btn">
+  </div>
+
+  <div class="links">
+    <a href="https://instagram.com/jovana.holistic.health.coach" class="link-btn">
       <div class="link-icon li-sage">📸</div>
       <div class="link-info"><div class="link-label">Instagram</div><div class="link-desc">@jovana.holistic.health.coach</div></div>
+      <span class="link-arrow">›</span>
+    </a>
+    <a href="mailto:jovana.jovic.coach@gmail.com" class="link-btn">
+      <div class="link-icon li-mauve">✉️</div>
+      <div class="link-info"><div class="link-label">Imaš pitanje ili želiš da radiš sa mnom?</div><div class="link-desc">Piši mi · jovana.jovic.coach@gmail.com</div></div>
       <span class="link-arrow">›</span>
     </a>
   </div>
@@ -305,9 +380,11 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
   <div class="about">
     <h3 class="about-title">Ko sam ja</h3>
     <div class="about-text">
-      <p>Jovana. Holistički zdravstveni coach sa fokusom na emocionalno isceljenje i obrasce u vezama.</p>
-      <p>Radim sa ženama koje se osećaju zaglavljeno — koje ponavljaju iste izbore, iste dinamike, iste boli. Koje su naučile da budu tu za sve i svakoga, osim za sebe.</p>
-      <p>Kroz somatski pristup, meditaciju i dubinski rad na svesti, pomažem ti da razumeš odakle dolaze tvoji obrasci i kako da ih konačno pustiš. Lakoća Srca nije program. To je put nazad sebi.</p>
+      <p>Jovana. Sertifikovani coach za holističko zdravlje, edukovana kroz integrativnu psihoterapiju, sa fokusom na emocionalno isceljenje i obrasce u odnosima i vezivanju.</p>
+      <p>Znam kako izgleda kada te veza ili razvod totalno izmesti iz sebe. Prošla sam kroz sopstveni razvod — i zahvaljujući svemu što sam godinama učila, istraživala i na sebi primenjivala, taj proces je prošao onoliko bezbolno koliko je moglo. Ne bez bola. Ali bez rušenja.</p>
+      <p>Znam i kako izgleda anksiozni attachment stil iznutra — ta stalna napetost, analiziranje, strah od napuštanja. I znam da se može isceliti. Jer sam to učinila.</p>
+      <p>Radim sa ženama koje se osećaju zaglavljeno — koje ponavljaju iste izbore, iste dinamike, iste boli. Koje su naučile da budu tu za sve i svakoga, osim za sebe. Kroz somatski pristup, meditaciju i dubinski rad na svesti, pomažem ti da razumeš odakle dolaze tvoji obrasci — i kako da ih konačno pustiš.</p>
+      <p>Lakoća Srca nije program koji sam izmislila. To je put koji sam sama prošla.</p>
     </div>
   </div>
 
@@ -315,6 +392,146 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
 </div>
 
 <script>
+// KVIZ
+const questions = [
+  {
+    q: "Kada neko ko ti je važan ne odgovori satima, šta se dešava u tebi?",
+    opts: [
+      { text: "Odmah počnem da analiziram šta sam pogrešila i šaljem još jednu poruku", score: 3 },
+      { text: "Primetim nelagodu i odmah nadjem nešto da me zaokupi — posao, scrollovanje, obaveze", score: 2 },
+      { text: "Napeta sam, ali svesno se distanciram i čekam", score: 1 },
+      { text: "Ne razmišljam previše — znam da to nema veze sa mnom", score: 0 }
+    ]
+  },
+  {
+    q: "Koliko često se pitaš 'da li sam dovoljno dobra' — u vezama, na poslu, kao osoba?",
+    opts: [
+      { text: "Stalno — i zato radim više, trudim se jače, da dokažem da jesam", score: 3 },
+      { text: "Često, ali to guram ispod tepiha i funkcionišem dalje", score: 2 },
+      { text: "Ponekad se pojavi, ali ne pokrećem akciju iz tog mesta", score: 1 },
+      { text: "Retko — moja vrednost mi ne zavisi od tuđe potvrde", score: 0 }
+    ]
+  },
+  {
+    q: "Kada osećaš jak bol ili tugu, šta najčešće radiš?",
+    opts: [
+      { text: "Gutam i idem dalje — ima toliko toga, nema vremena za to", score: 3 },
+      { text: "Bacim se u aktivnost, društvo, serije — dok ne prođe samo", score: 2 },
+      { text: "Pokušam da osetim, ali brzo prebacim u analizu — 'zašto se tako osećam'", score: 1 },
+      { text: "Dajem sebi prostora da prođem kroz to i pustim", score: 0 }
+    ]
+  },
+  {
+    q: "Kada postavljaš granicu prema nekome — kažeš 'ne', tražiš prostor — kako se osećaš?",
+    opts: [
+      { text: "Kriva. I obično na kraju ipak popustim ili se previše objašnjavam", score: 3 },
+      { text: "Kažem 'ne', ali potom danima brinem jesam li povredila osobu", score: 2 },
+      { text: "Nelagodno mi je, ali ne povlačim granicu nazad", score: 1 },
+      { text: "To je prirodan deo mene — bez previše dramе", score: 0 }
+    ]
+  },
+  {
+    q: "Kako ti telo reaguje u situacijama emocionalnog stresa — svađa, odbijanje, neizvesnost?",
+    opts: [
+      { text: "Stegne mi se sve — i odmah idem u 'fix mode', moram da rešim situaciju", score: 3 },
+      { text: "Povučem se, utišam sebe i čekam da prođe", score: 2 },
+      { text: "Primetim reakciju u telu, ali je teško odmah procesuirati", score: 1 },
+      { text: "Osećam, imam prostor za to i mogu da se vratim u mir", score: 0 }
+    ]
+  },
+  {
+    q: "Kada si sama sa sobom — bez posla, bez telefona, bez obaveza — kako se osećaš?",
+    opts: [
+      { text: "Nelagodno. Moram odmah nešto da radim, inače se pojave misli koje ne želim", score: 3 },
+      { text: "Posegnem za telefonom gotovo automatski — tišina mi ne prija", score: 2 },
+      { text: "Ponekad mi je teško, ali mogu da ostanem sa sobom", score: 1 },
+      { text: "To mi je punjenje — volim to vreme i tražim ga", score: 0 }
+    ]
+  }
+];
+
+const results = [
+  {
+    min: 13,
+    icon: "🌊",
+    type: "Nosiš previše",
+    title: "Iscrpljena si od sopstvene snage",
+    text: "Naučila si da funkcionišeš uprkos bolu — da ideš dalje, da budeš tu za druge, da ne pokazuješ koliko ti je teško. To zahteva ogromnu energiju. Telo i duša nose ono što um nije imao prostora da procesuira. Nisi slomljena — preterano si dugo bila cela sama.",
+    program: "Lakoća Srca te vodi korak po korak kroz somatski rad koji oslobađa ono što je zaglavljeno u telu. Kroz vežbe disanja, meditacije i dubinske uvide počinješ da spuštaš teret koji nisi ni znala da nosiš — i vraćaš energiju sebi."
+  },
+  {
+    min: 7,
+    icon: "🌿",
+    type: "Na pragu promene",
+    title: "Vidiš šta se dešava, ali ne znaš kako da izađeš",
+    text: "Imaš svesnost — možda čitaš, razmišljaš, razumeš obrasce. Ali razumevanje samo po sebi ne menja osećanje. Stariš u ciklusu u kome znaš šta radiš, a ne možeš da se zaustavljaš. To nije tvoja greška — promenu blokira nešto dublje od misli.",
+    program: "Program ti daje konkretne alate — ne još teorije, već prakse koje rade na nivou nervnog sistema. Cord cutting meditacija, rad sa unutrašnjim detetom, self-worth journaling — sve što premošćuje jaz između 'znam' i 'osećam'."
+  },
+  {
+    min: 0,
+    icon: "🌸",
+    type: "Svesna i stabilna",
+    title: "Već si na svom putu",
+    text: "Izgradila si dobar odnos sa sobom. Možda si prošla kroz nešto što te naučilo kako da se vratiš sebi — ili si prirodno više u kontaktu sa sobom. I dalje možeš da ideš dublje, ali krećeš sa dobrog mesta.",
+    program: "Lakoća Srca ti može ponuditi produbljivanje — fini rad na mestima koja su još uvek nežna, integraciju obrazaca kojih možda nisi ni svesna, i prostor za rast koji dolazi iz mira, a ne bola."
+  }
+];
+
+let current = 0;
+let totalScore = 0;
+
+function startQuiz() {
+  document.getElementById('quizIntro').style.display = 'none';
+  document.getElementById('quizQuestions').style.display = 'block';
+  showQuestion();
+}
+
+function showQuestion() {
+  const q = questions[current];
+  document.getElementById('quizCounter').textContent = `Pitanje ${current + 1} od ${questions.length}`;
+  document.getElementById('quizFill').style.width = `${(current / questions.length) * 100}%`;
+  document.getElementById('quizQ').textContent = q.q;
+
+  const opts = document.getElementById('quizOptions');
+  opts.innerHTML = '';
+  q.opts.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'quiz-opt';
+    btn.textContent = opt.text;
+    btn.onclick = () => selectAnswer(opt.score);
+    opts.appendChild(btn);
+  });
+}
+
+function selectAnswer(score) {
+  totalScore += score;
+  current++;
+  if (current < questions.length) {
+    showQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function showResult() {
+  document.getElementById('quizQuestions').style.display = 'none';
+  const res = results.find(r => totalScore >= r.min);
+  document.getElementById('quizResultIcon').textContent = res.icon;
+  document.getElementById('quizResultType').textContent = res.type;
+  document.getElementById('quizResultTitle').textContent = res.title;
+  document.getElementById('quizResultText').textContent = res.text;
+  document.getElementById('quizResultProgram').textContent = res.program;
+  document.getElementById('quizResult').style.display = 'block';
+  document.getElementById('quizWrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function restartQuiz() {
+  current = 0;
+  totalScore = 0;
+  document.getElementById('quizResult').style.display = 'none';
+  document.getElementById('quizIntro').style.display = 'block';
+}
+
 function toggleTesti(){
   const more = document.getElementById('testiMore');
   const btn = document.getElementById('testiBtn');
