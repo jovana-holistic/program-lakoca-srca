@@ -203,7 +203,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
       <span>Dnevnik refleksija</span>
       <span>Personalizovana podrška</span>
     </div>
-    <a href="https://prijava-lakoca-srca.netlify.app/" class="cta">Prijava za program →</a>
+    <a href="https://prijava-lakoca-srca.netlify.app/?utm_source=biolink&utm_medium=web&utm_content=hero_prijava" class="cta" onclick="gtag('event','click',{event_category:'cta',event_label:'hero_prijava'})">Prijava za program →</a>
   </div>
 
   <!-- FAZE -->
@@ -273,7 +273,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
     <p class="program-cta-eyebrow">Sledeći krug</p>
     <h3 class="program-cta-title">Spremnа si da pustiš?</h3>
     <p class="program-cta-desc">21 dan. Somatski rad, meditacije, dubinski uvidi.<br>Vraćaš se sebi — korak po korak.</p>
-    <a href="https://prijava-lakoca-srca.netlify.app/" class="program-cta-btn">Prijava za program →</a>
+    <a href="https://prijava-lakoca-srca.netlify.app/?utm_source=biolink&utm_medium=web&utm_content=program_cta" class="program-cta-btn" onclick="gtag('event','click',{event_category:'cta',event_label:'program_cta_prijava'})">Prijava za program →</a>
   </div>
 
   <!-- FEATURED QUOTE -->
@@ -329,7 +329,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
       <p class="quiz-intro-title">Da li ti je potrebna <em style="font-family:'Cormorant Garamond',serif;font-style:italic">Lakoća Srca</em>?</p>
       <p style="font-size:12px;color:var(--muted);font-weight:300;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;">Proveri kako ti ovaj program može pomoći</p>
       <p class="quiz-intro-desc">6 pitanja. 3 minuta. Iskreno sebi.</p>
-      <button class="quiz-start-btn" onclick="startQuiz()">Počni →</button>
+      <button class="quiz-start-btn" onclick="startQuiz();gtag('event','click',{event_category:'kviz',event_label:'kviz_start'})">Počni →</button>
     </div>
 
     <div id="quizQuestions" style="display:none">
@@ -347,7 +347,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
       <div class="quiz-result-divider"></div>
       <p class="quiz-result-program-label">Kako ti <strong style="font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600">Lakoća Srca</strong> pomaže</p>
       <p class="quiz-result-program" id="quizResultProgram"></p>
-      <a href="https://prijava-lakoca-srca.netlify.app/" class="quiz-result-cta">Prijavi se za program →</a>
+      <a href="https://prijava-lakoca-srca.netlify.app/?utm_source=biolink&utm_medium=web&utm_content=kviz_rezultat" class="quiz-result-cta" onclick="gtag('event','click',{event_category:'cta',event_label:'kviz_rezultat_prijava'})">Prijavi se za program →</a>
       <button class="quiz-restart" onclick="restartQuiz()">Ponovi kviz</button>
     </div>
 
@@ -356,7 +356,7 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
   <!-- LINKS -->
   <p class="section-label">Istraži</p>
   <div class="links">
-    <a href="https://besplatna-meditacija.netlify.app" class="link-btn" target="_blank">
+    <a href="https://besplatna-meditacija.netlify.app" class="link-btn" target="_blank" onclick="gtag('event','click',{event_category:'link',event_label:'besplatna_meditacija'})">
       <div class="link-icon li-gold">🎁</div>
       <div class="link-info"><div class="link-label">Besplatna meditacija</div><div class="link-desc">10 minuta — odmah dostupno</div></div>
       <span class="link-arrow">›</span>
@@ -364,12 +364,12 @@ body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellips
   </div>
 
   <div class="links">
-    <a href="https://instagram.com/jovana.holistic.health.coach" class="link-btn">
+    <a href="https://instagram.com/jovana.holistic.health.coach" class="link-btn" onclick="gtag('event','click',{event_category:'link',event_label:'instagram'})">
       <div class="link-icon li-sage">📸</div>
       <div class="link-info"><div class="link-label">Instagram</div><div class="link-desc">@jovana.holistic.health.coach</div></div>
       <span class="link-arrow">›</span>
     </a>
-    <a href="mailto:jovana.jovic.coach@gmail.com" class="link-btn">
+    <a href="mailto:jovana.jovic.coach@gmail.com" class="link-btn" onclick="gtag('event','click',{event_category:'link',event_label:'email'})">
       <div class="link-icon li-mauve">✉️</div>
       <div class="link-info"><div class="link-label">Imaš pitanje ili želiš da radiš sa mnom?</div><div class="link-desc">Piši mi · jovana.jovic.coach@gmail.com</div></div>
       <span class="link-arrow">›</span>
@@ -541,6 +541,7 @@ function toggleTesti(){
   btn.innerHTML = isOpen
     ? 'Prikaži još iskustava <span class="arr">∨</span>'
     : 'Sakrij <span class="arr">∨</span>';
+  if(!isOpen) gtag('event','click',{event_category:'expand',event_label:'testimonijali'});
 }
 </script>
 </body>
